@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+	color: #f8fedb;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+	background-color: #030303;
+}
+
+nav ul {
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+	list-style-type: none;
+}
+
+nav li {
+	width: 180px;
+	font-size: 20px;
+	padding: 20px;
+	float: right;
+}
+
+nav a {
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+nav a:hover {
+	font-size: 30px;
+	color: #03abab;
+}
+
+nav a:active {
+	color: #f8fedb;
+}
+
+header {
+	padding-top: 20vh;
+}
+
+h1 {
+	font-family: "Bulgatti", sans-serif;
+	font-size: 150px;
+	color: #03abab;
+}
+
+.description-texts {
+	font-size: 20px;
+}
+
+.header-description {
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-description {
+	letter-spacing: 0.5px;
+	line-height: 20px;
+	margin: auto;
+	width: 30vw;
+	padding: 10px 0px;
+}
+
+.vertical-line {
+	margin: 20px;
+	margin-left: 50%;
+	background-color: #f8fedb;
+	width: 0.5px;
+	height: 300px;
+}
+
+.section-title {
+	margin-bottom: 20px;
+	font-size: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #03abab;
+}
+
+.tech-stack {
+	margin: auto;
+	width: 30vw;
+	justify-content: center;
+	display: flex;
+}
+
+.tech-stack ul li {
+	margin-left: 40px;
+	text-align: left;
+}
+
+.project-title {
+	font-size: 60px;
+	letter-spacing: 3px;
+}
+
+.project-container {
+	width: 30vw;
+	margin: auto;
+}
+
+.project-container a {
+	margin: auto;
+	display: block;
+	text-decoration: none;
+	font-size: 30px;
+	font-weight: 400;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	top: 130px;
+	position: relative;
+	z-index: -1;
+}
+
+.project-container:hover a {
+	z-index: +2;
+}
+
+.project-container a:hover {
+	opacity: 0.7;
+}
+
+.project-img {
+	z-index: +1;
+	width: 100%;
+}
+
+.project-container:hover img {
+	filter: grayscale(100%);
+}
+
+h2 {
+	padding: 150px;
+	font-size: 80px;
+	font-family: "Bulgatti", sans-serif;
+}
+
+.contact-icons {
+	margin-top: 20px;
+	font-size: 30px;
+}
+
+.contact-icons a:hover {
+	opacity: 0.7;
+}
+
+@media only screen and (max-width: 768px) {
+	.about-description,
+	.tech-stack,
+	.project-container {
+		width: 70vw;
+	}
+
+	nav li {
+		width: 120px;
+	}
+
+	h1 {
+		font-size: 80px;
+	}
+
+	h2 {
+		padding: 20px;
+		font-size: 40px;
+	}
+}
