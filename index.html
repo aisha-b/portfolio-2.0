@@ -7,6 +7,10 @@
 		<link rel="icon" href="images/logo.png" />
 		<link rel="stylesheet" href="style.css" />
 		<link href="http://fonts.cdnfonts.com/css/bulgatti" rel="stylesheet" />
+		<link
+			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+			rel="stylesheet"
+		/>
 
 		<title>Aisha Baigtu</title>
 	</head>
@@ -20,7 +24,7 @@
 		</nav>
 
 		<header class="section-container">
-			<h1>Aisha</h1>
+			<h1 id="header">Aisha</h1>
 			<p class="header-description">FULL STACK WEB DEVELOPER</p>
 		</header>
 
@@ -28,7 +32,7 @@
 
 		<div class="section-container">
 			<p id="aboutSection" class="section-title">ABOUT</p>
-			<div class="description-texts">
+			<div class="description-texts" data-aos="fade-down">
 				<p class="about-description">
 					Hi! I am an Electronics Engineer who pursued my passion in
 					Web Development. I have learned the different technologies
@@ -36,27 +40,52 @@
 					build quality websites that doesn't compromise design. I
 					have a drive for innovation and problem-solving.
 				</p>
+				<div class="short-vertical-line"></div>
 				<p class="about-description">
 					Here are some technologies I have worked with:
 				</p>
-			</div>
-
-			<div class="tech-stack description-texts">
-				<ul>
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Bootstrap</li>
-				</ul>
-				<ul>
-					<li>JavaScript</li>
-					<li>React.js</li>
-					<li>Node.js</li>
-				</ul>
-				<ul>
-					<li>Express.js</li>
-					<li>MongoDB</li>
-					<li>Mongoose</li>
-				</ul>
+				<div class="tech-stack description-texts">
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Bootstrap</li>
+					</ul>
+					<ul>
+						<li>JavaScript</li>
+						<li>React.js</li>
+						<li>Node.js</li>
+					</ul>
+					<ul>
+						<li>Express.js</li>
+						<li>MongoDB</li>
+						<li>Mongoose</li>
+					</ul>
+				</div>
+				<div class="short-vertical-line"></div>
+				<p class="about-description">Certifications:</p>
+				<div class="certificate-container">
+					<a
+						href="https://freecodecamp.org/certification/aishabaigtu/javascript-algorithms-and-data-structures"
+						target="_blank"
+						>FreeCodeCamp: JavaScript Algorithms and Data
+						Structures</a
+					>
+				</div>
+				<div class="certificate-container">
+					<a
+						href="https://freecodecamp.org/certification/aishabaigtu/responsive-web-design"
+						target="_blank"
+						>FreeCodeCamp: Responsive Web Design Structures</a
+					>
+				</div>
+				<div class="certificate-container">
+					<a
+						href="https://share.zertify.zuitt.co/certificate/18373d57-3fe8-4d4a-a6f0-e52b481b2a21/"
+						target="_blank"
+						>Zuitt Coding Bootcamp: Full Stack Web Development
+						Structures</a
+					>
+				</div>
 			</div>
 		</div>
 
@@ -64,19 +93,21 @@
 
 		<div class="section-container">
 			<p id="projectsSection" class="section-title">PROJECTS</p>
-			<p class="project-title">Bookmarked</p>
-			<div class="project-container">
-				<a
-					href="https://bookmarked-ecommerce.vercel.app/"
-					target="_blank"
-					>Visit Website</a
-				>
-				<img class="project-img" src="./images/project1.jpg" />
-				<p>
-					An online ecommerce bookstore shop website built with MERN
-					Stack. Registration, Login, Wishlist, Cart, and Checkout
-					Features.
-				</p>
+			<div data-aos="fade-down">
+				<p class="project-title">Bookmarked</p>
+				<div class="project-container">
+					<a
+						href="https://bookmarked-ecommerce.vercel.app/"
+						target="_blank"
+						>Visit Website</a
+					>
+					<img class="project-img" src="./images/project1.jpg" />
+					<p>
+						An online ecommerce bookstore shop website built with
+						MERN Stack. Registration, Login, Wishlist, Cart, and
+						Checkout Features.
+					</p>
+				</div>
 			</div>
 		</div>
 
@@ -84,7 +115,7 @@
 
 		<div class="section-container">
 			<p id="contactSection" class="section-title">CONTACT</p>
-			<div class="description-texts">
+			<div class="description-texts" data-aos="fade-down">
 				<p>Aisha Baigtu</p>
 				<p>+63 967 628 0448</p>
 				<p>aishabaigtu@gmail.com</p>
@@ -104,11 +135,27 @@
 			</div>
 		</div>
 
-		<footer><h2>Let's build something amazing!</h2></footer>
+		<footer>
+			<h2>Let's build something amazing!</h2>
+		</footer>
+
+		<div class="cursor"></div>
 
 		<script
 			src="https://kit.fontawesome.com/448f19f84e.js"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+		<script>
+			AOS.init();
+
+			var cursor = document.querySelector(".cursor");
+
+			document.addEventListener("mousemove", function (e) {
+				cursor.style.cssText =
+					"left: " + e.clientX + "px; top: " + e.clientY + "px;";
+			});
+		</script>
 	</body>
 </html>

@@ -5,6 +5,7 @@
 	text-align: center;
 	color: #f8fedb;
 	font-family: Georgia, "Times New Roman", Times, serif;
+	cursor: pointer;
 }
 
 body {
@@ -16,6 +17,7 @@ nav ul {
 	position: fixed;
 	width: 100%;
 	list-style-type: none;
+	z-index: +5;
 }
 
 nav li {
@@ -41,6 +43,10 @@ nav a:active {
 
 header {
 	padding-top: 20vh;
+}
+
+h1:hover {
+	text-shadow: 2px 2px 10px #03abab;
 }
 
 h1 {
@@ -77,6 +83,14 @@ h1 {
 	height: 300px;
 }
 
+.short-vertical-line {
+	margin: 20px;
+	margin-left: 50%;
+	background-color: #f8fedb;
+	width: 0.5px;
+	height: 50px;
+}
+
 .section-title {
 	margin-bottom: 20px;
 	font-size: 40px;
@@ -92,6 +106,34 @@ h1 {
 .tech-stack ul li {
 	margin-left: 40px;
 	text-align: left;
+}
+
+.certificate-container {
+	padding: 10px;
+	border: 1px solid #f8fedb;
+	border-radius: 10px;
+	margin: 20px;
+}
+
+.certificate-container:hover {
+	border: 1px solid #03abab;
+}
+
+.certificate-container:hover a {
+	color: #03abab;
+}
+
+.certificate-container a {
+	text-decoration: none;
+}
+
+.certificate-container:active {
+	background-color: #03abab;
+	border: 1px solid #03abab;
+}
+
+.certificate-container:active a {
+	color: #f8fedb;
 }
 
 .project-title {
@@ -133,8 +175,11 @@ h1 {
 
 h2 {
 	padding: 150px;
-	font-size: 80px;
+	font-size: 60px;
 	font-family: "Bulgatti", sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .contact-icons {
@@ -142,8 +187,24 @@ h2 {
 	font-size: 30px;
 }
 
-.contact-icons a:hover {
-	opacity: 0.7;
+.contact-icons a:hover i {
+	color: #03abab;
+}
+
+.cursor {
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	border: 1px solid #fea680;
+	background-color: #fea680;
+	border-radius: 50%;
+	left: -30px;
+	top: -30px;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: 0.15s;
+	z-index: +20;
+	opacity: 0.6;
 }
 
 /*scrollbar*/
