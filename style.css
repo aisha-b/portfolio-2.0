@@ -49,6 +49,11 @@ h1 {
 	color: #03abab;
 }
 
+.section-container {
+	width: 30vw;
+	margin: auto;
+}
+
 .description-texts {
 	font-size: 20px;
 }
@@ -61,8 +66,6 @@ h1 {
 .about-description {
 	letter-spacing: 0.5px;
 	line-height: 20px;
-	margin: auto;
-	width: 30vw;
 	padding: 10px 0px;
 }
 
@@ -82,8 +85,6 @@ h1 {
 }
 
 .tech-stack {
-	margin: auto;
-	width: 30vw;
 	justify-content: center;
 	display: flex;
 }
@@ -98,11 +99,6 @@ h1 {
 	letter-spacing: 3px;
 }
 
-.project-container {
-	width: 30vw;
-	margin: auto;
-}
-
 .project-container a {
 	margin: auto;
 	display: block;
@@ -111,7 +107,7 @@ h1 {
 	font-weight: 400;
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
-	top: 130px;
+	top: calc(10vw + 15px);
 	position: relative;
 	z-index: -1;
 }
@@ -126,7 +122,9 @@ h1 {
 
 .project-img {
 	z-index: +1;
+	object-fit: cover;
 	width: 100%;
+	margin-bottom: 10px;
 }
 
 .project-container:hover img {
@@ -149,14 +147,38 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
-	.about-description,
-	.tech-stack,
-	.project-container {
+	.section-container {
 		width: 70vw;
 	}
 
 	nav li {
-		width: 120px;
+		font-size: 20px;
+		padding: 10px;
+		float: none;
+	}
+
+	nav ul {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+
+	.project-title {
+		font-size: 40px;
+	}
+
+	.project-container a {
+		top: calc(23vw + 15px);
+	}
+
+	.tech-stack {
+		flex-direction: column;
+	}
+
+	.tech-stack ul li {
+		text-align: center;
+		list-style-type: none;
+		margin: 0;
 	}
 
 	h1 {
@@ -164,7 +186,24 @@ h2 {
 	}
 
 	h2 {
-		padding: 20px;
+		padding: 50px;
 		font-size: 40px;
+	}
+
+	/*scrollbar*/
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: white;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: lightgray;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #03abab;
 	}
 }
