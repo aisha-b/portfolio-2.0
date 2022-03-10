@@ -118,7 +118,11 @@
 			<div class="description-texts" data-aos="fade-down">
 				<p>Aisha Baigtu</p>
 				<p>+63 967 628 0448</p>
-				<p><a href="mailto:aishabaigtu@gmail.com">aishabaigtu@gmail.com</a></p>
+				<p>
+					<a href="mailto:aishabaigtu@gmail.com"
+						>aishabaigtu@gmail.com</a
+					>
+				</p>
 				<div class="contact-icons">
 					<a href="https://github.com/aisha-b" target="_blank"
 						><i class="fab fa-github m-2"></i
@@ -151,13 +155,6 @@
 		<script>
 			AOS.init();
 
-			// var cursor = document.querySelector(".cursor");
-
-			// document.addEventListener("mousemove", function (e) {
-			// 	cursor.style.cssText =
-			// 		"left: " + e.clientX + "px; top: " + e.clientY + "px;";
-			// });
-
 			$(document).ready(() => {
 				$("body").mousemove((e) => {
 					$(".cursor").css({
@@ -165,22 +162,26 @@
 						top: `${e.clientY}px`,
 					});
 				});
+				
+				$(".section-container, footer")
+					.children()
+					.mouseenter(() => {
+						$(".cursor").css({
+							height: "120px",
+							width: "120px",
+							backgroundColor: "transparent",
+						});
+					});
 
-				$(".section-container, footer").children().mouseenter(() => {
-					$(".cursor").css({
-						height: "120px",
-						width: "120px",
-						backgroundColor: "transparent",
-					})
-				});
-
-				$(".section-container, footer").children().mouseleave(() => {
-					$(".cursor").css({
-						height: "50px",
-						width: "50px",
-						backgroundColor: "#fea680",
-					})
-				})
+				$(".section-container, footer")
+					.children()
+					.mouseleave(() => {
+						$(".cursor").css({
+							height: "50px",
+							width: "50px",
+							backgroundColor: "#fea680",
+						});
+					});
 			});
 		</script>
 	</body>
