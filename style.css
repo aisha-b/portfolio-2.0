@@ -188,7 +188,7 @@ h2 {
 	font-size: 30px;
 }
 
-.contact-icons a:hover i {
+.contact-icons a:hover i, .section-container a:hover {
 	color: #03abab;
 }
 
