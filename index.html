@@ -146,15 +146,41 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		<script>
 			AOS.init();
 
-			var cursor = document.querySelector(".cursor");
+			// var cursor = document.querySelector(".cursor");
 
-			document.addEventListener("mousemove", function (e) {
-				cursor.style.cssText =
-					"left: " + e.clientX + "px; top: " + e.clientY + "px;";
+			// document.addEventListener("mousemove", function (e) {
+			// 	cursor.style.cssText =
+			// 		"left: " + e.clientX + "px; top: " + e.clientY + "px;";
+			// });
+
+			$(document).ready(() => {
+				$("body").mousemove((e) => {
+					$(".cursor").css({
+						left: `${e.clientX}px`,
+						top: `${e.clientY}px`,
+					});
+				});
+
+				$(".section-container, footer").children().mouseenter(() => {
+					$(".cursor").css({
+						height: "120px",
+						width: "120px",
+						backgroundColor: "transparent",
+					})
+				});
+
+				$(".section-container, footer").children().mouseleave(() => {
+					$(".cursor").css({
+						height: "50px",
+						width: "50px",
+						backgroundColor: "#fea680",
+					})
+				})
 			});
 		</script>
 	</body>

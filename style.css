@@ -104,8 +104,8 @@ h1 {
 	display: flex;
 }
 
-.tech-stack ul li {
-	margin: 0 20px;
+.tech-stack li {
+	margin-left: 40px;
 	text-align: left;
 }
 
@@ -194,16 +194,16 @@ h2 {
 
 .cursor {
 	position: fixed;
-	width: 70px;
-	height: 70px;
-	border: 1px solid #fea680;
+	width: 50px;
+	height: 50px;
+	border: 3px solid #fea680;
 	background-color: #fea680;
 	border-radius: 50%;
 	left: -30px;
 	top: -30px;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
-	transition: 0.15s;
+	transition: top 0.15s, left 0.15s, width 1s, height 1s, background-color 1s;
 	z-index: +20;
 	opacity: 0.6;
 }
