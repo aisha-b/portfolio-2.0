@@ -203,7 +203,7 @@ h2 {
 	top: -30px;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
-	transition: top 0.15s, left 0.15s, width 1s, height 1s, background-color 1s;
+	transition: width 1s, height 1s, background-color 1s;
 	z-index: +20;
 	opacity: 0.6;
 }
