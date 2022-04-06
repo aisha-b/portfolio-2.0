@@ -172,6 +172,7 @@ h1 {
 
 .project-container:hover img {
 	filter: grayscale(100%);
+	opacity: .2;
 }
 
 h2 {
